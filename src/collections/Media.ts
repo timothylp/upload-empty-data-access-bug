@@ -3,8 +3,8 @@ import type { CollectionConfig } from 'payload'
 export const Media: CollectionConfig = {
   slug: 'media',
   access: {
-    read: ({id, data}) => {
-      console.log("Read Access", {id, data})
+    read: (props) => {
+      console.log('Read Access', props.id, props.data)
       return true
     },
   },
